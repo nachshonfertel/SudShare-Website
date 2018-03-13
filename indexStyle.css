@@ -1,0 +1,289 @@
+* {
+  font-family: 'Work Sans', sans-serif;
+  outline: 0 !important;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+    min-height: 600px;
+  position: relative;
+  background: radial-gradient(white, rgba(0,0,0,0.05));
+}
+
+.valign {
+  display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+  
+}
+
+#CenterSec {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 0px 10px;
+  position: relative;
+
+}
+
+.Appear {
+  opacity: 0;
+  transition: opacity 1.5s !important;
+}
+.AppearTitle {
+  opacity: 0;
+  transform: scale(2.5);
+  transition: all 1.5s;
+  transition-timing-function: ease-out;
+
+}
+
+#Logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -70px;
+  margin-bottom: 40px;
+  padding-right: 10px;
+  
+}
+
+#CenterSec h1 {
+  text-align: center;
+  font-size: 90px;
+  font-weight: 100;
+  margin: 0;
+  margin-top: 0px;
+  
+}
+#CenterSec h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: dimgray;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  line-height: 145%;
+}
+
+#ChooseDiv {
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  border-radius: 5px;
+  width: 550px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.2s;
+}
+#ChooseDiv button {
+  background: black;
+  color: white;
+  width: 49.8%;
+  border: none;
+  float: left;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+    transition: all 0.2s;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+#ChooseDiv button:hover {
+  letter-spacing: 2.7px;
+}
+#ChooseDiv:hover {
+  
+}
+
+#ChooseDiv label {
+  position: absolute;
+  display: block;
+  left: calc(50% - 12.5px);
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 25px;
+  font-size: 10px;
+  top: 12.5px;
+  color: dimgray;
+}
+
+#ChooseInfoDiv {
+   width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+}
+#ChooseInfoDiv p {
+  float: left;
+  color: lightgray;
+  width: calc(50% - 41px);
+  padding: 0px 20px;
+  line-height: 150%;
+  font-size: 14px;
+  
+}
+#ChooseInfoDiv span {
+  display: block;
+  float: left;
+  height: 40px;
+  background: lightgray;
+  width: 1px;
+  margin-top: 15px;
+}
+
+footer {
+
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  padding: 8px 0px;
+  background: white;
+  line-height: 30px;
+  padding-right: 25px;
+  overflow: hidden;
+}
+footer a {
+  float: right;
+  padding: 0 20px;
+  font-size: 12px;
+  color: gray;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+footer a:hover {
+  color: black;
+}
+#Copyright {
+  float: left;
+  padding-left: 25px;
+  color: lightgray;
+  
+}
+#SocialDiv {
+  border-left: solid 1px lightgray;
+  overflow: hidden;
+  float: right;
+  padding-left: 25px;
+  margin-left: 15px;
+}
+#SocialDiv a {
+  fill: gray;
+   width: 30px;
+        height: 30px;
+  padding: 0 10px;
+  transition: fill 0.2s;
+}
+#SocialDiv a:hover {
+  fill: black;
+}
+@media only screen and (max-width: 1000px) {
+  
+  #CenterSec h1 {
+    font-size: 55px;
+  }
+  #CenterSec h2 {
+    font-size: 15px;
+  }
+  
+  
+}
+
+@media only screen and (max-width: 620px) {
+
+  
+  #Logo {
+    margin-bottom: 25px;
+    width: 130px;
+  }
+  
+  
+  #CenterSec {
+    width: 400px;
+  }
+  
+  #CenterSec h1 {
+    font-size: 65px;
+    
+  }
+  #CenterSec h2 {
+    font-size: 17px;
+    width: 300px;
+    margin: 30px auto;
+    
+  }
+  
+  #ChooseDiv {
+    width: 95%;
+  }
+  #ChooseDiv button {
+    font-size: 16px;
+    letter-spacing: 0px !important;
+  }
+  #ChooseInfoDiv {
+    width: 95%;
+  }
+  #ChooseInfoDiv p {
+    font-size: 13px;
+    text-align: left;
+  }
+  #ChooseInfoDiv .p2 {
+    text-align: right;
+  }
+  #ChooseInfoDiv span {
+    height: 55px;
+  }
+  
+}
+
+@media only screen and (max-width: 400px) { 
+  
+  #CenterSec h1 {
+    font-size: 50px;
+    font-weight: 200;
+  }
+  #CenterSec h2 {
+    font-size: 13px;
+    width: 250px;
+    margin: 30px auto;
+  }
+  #ChooseInfoDiv {
+    margin-top: 15px;
+  }
+  #ChooseInfoDiv p {
+    line-height: 130%;
+  }
+  #ChooseInfoDiv span {
+    height: 45px;
+  }
+  
+}
+
+@media only screen and (max-height: 600px) {
+  footer {
+    position: absolute !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+

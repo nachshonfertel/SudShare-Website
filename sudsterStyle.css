@@ -1,0 +1,584 @@
+* {
+  font-family: 'Work Sans', sans-serif;
+  outline: 0 !important;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
+  box-shadow: 0 0px 30px rgba(0,0,0,0.25);
+  overflow-x: hidden;
+}
+
+.valign {
+  display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+  
+}
+
+#HomeInnerDiv {
+  height: 650px;
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  margin-left: calc(25% - 300px);
+  
+}
+#HomeInnerDiv h1 {
+  font-weight: 300;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+#HomeInnerDiv h2 {
+  font-weight: 400;
+  font-size: 15px;
+  color: dimgray;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#HomeSlantDiv {
+   transform:skew(0deg,-7deg);
+  -ms-transform:skew(0deg,-7deg); 
+  -webkit-transform:skew(0deg,-7deg);
+  transform-origin:right;
+  background: #25fdb7;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#HomeSec {
+  position: relative;
+  background: white;
+
+}
+#LogoImg {
+  width: 250px;
+  margin-top: 80px;
+
+}
+
+#HomeCTADiv {
+  width: 400px;
+  text-align: center;
+  padding-bottom: 15px;
+  margin-top: 40px;
+  background: white;
+  box-shadow: 0 5px 35px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 5px;
+}
+#HomeCTADiv h1 {
+  font-weight: 300;
+  color: #21e3a4;
+  font-size: 35px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: block;
+  margin-top: 0px;
+}
+
+#HomeCTATextDiv {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  width: 400px;
+  height: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background: white;
+}
+#HomeCTATextDiv input {
+  border: none;
+  height: 100%;
+  width: calc(100% - 170px);
+  text-align: center;
+  font-size: 22px;
+  float: left;
+  margin-top: -1px;
+  
+}
+#HomeCTATextDiv button {
+  height: 100%;
+  border: none;
+  background: #21e3a4;
+  float: right;
+  width: 165px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+#HomeCTADiv a {
+
+  margin-right: 15px;
+}
+#HomeCTADiv img {
+  height: 45px;
+}
+#HomeCTALoadingDiv {
+  background: none;
+  border: solid 4px #21e3a4;
+  border-left-color: white;
+  border-right-color: white;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: block;
+  margin-top: 8px;
+  float: right;
+  margin-right: 15px;
+  animation-name: LoadingDivAnimate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#HomeCTALoadingParent {
+  display: none;
+}
+@keyframes LoadingDivAnimate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#HomeCTALoadingText {
+  font-size: 20px;
+  line-height: 50px;
+  font-size: 25px;
+  color: dimgray;
+  font-weight: 300;
+  text-align: left;
+  margin-left: 30px;
+  display: block;
+}
+#HomeHeroImg {
+  position: absolute;
+  width: 50%;
+  right: 00px;
+  top: 60px;
+  z-index: 2;
+  
+
+}
+
+#HIWSec {
+  background: #25fdb7;
+  padding-top: 200px;
+  position: relative;
+  overflow: hidden;
+}
+#HIWTitle {
+  color: white;
+  text-align: center;
+  font-weight: 200;
+  font-size: 100px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 80px;
+}
+#HIWTitle i {
+  display: block;
+  font-size: 50px;
+  margin-top: 60px;
+}
+.HIWItemDiv {
+  height: 600px;
+  position: relative;
+  
+  background-position: calc(50% + 250px);
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+#HIWItemDiv1 {
+  background-color: #fd25d7;
+  background-image: url(img/HIWScreenshot1.png);
+}
+#HIWItemDiv2 {
+  background-color: #25d7fd;
+  background-image: url(img/HIWScreenshot2.png);
+}
+#HIWItemDiv3 {
+  background-color: #f4e039;
+  background-image: url(img/HIWScreenshot3.png);
+}
+#HIWItemDiv4 {
+  background-color: #25fdb7;
+  background-image: url(img/HIWScreenshot4.png);
+}
+
+.HIWItemDiv label {
+  font-size: 25px;
+  color: white;
+  border: solid 3px rgba(255,255,255,0.3);
+  width: 35px;
+  height: 35px;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  float: left;
+  margin-right: 25px;
+  font-weight: 500;
+  position: relative;
+  top: 10px;
+  z-index: 5;
+}
+.HIWItemDiv h1 {
+  font-size: 50px;
+  font-weight: 300;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: white;
+  margin-bottom: 15px;
+  
+}
+.HIWItemDiv h2 {
+  font-size: 16px;
+  width: 250px;
+  padding-left: 70px;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  line-height: 150%;
+  margin-top: 0px;
+}
+#HIWScreenshot {
+  float: right;
+  width: 300px;
+  position: absolute;
+  right: 0;
+  display: none;
+  -webkit-filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4));
+}
+#HIWItemInnerDiv {
+   max-width: 750px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 0px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  
+}
+#HIWItemLeftDiv {
+  float: left;
+  margin-top: -30px;
+}
+
+#HIWItemSlantDiv {
+  transform:skew(0deg,7deg);
+  -ms-transform:skew(0deg,7deg); 
+  -webkit-transform:skew(0deg,7deg);
+  transform-origin:right;
+  height: 300px;
+  position: absolute;
+  right: 0;
+  bottom: ;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+#HIWItemNumberLine {
+  width: 3px;
+  background: rgba(255,255,255,0.3);
+  height: 1800px;
+  position: absolute;
+  left: 44px;
+  top: 260px;
+  z-index: 2;
+}
+#HIWItemNumberLineDiv {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#ReviewSec {
+  height: 700px;
+  position: relative;
+}
+#ReviewSlantDiv {
+   transform:skew(0deg,5deg);
+  -ms-transform:skew(0deg,5deg); 
+  -webkit-transform:skew(0deg,5deg);
+  transform-origin:right;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  background: white;
+}
+#ReviewInnerDiv {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  
+}
+#ReviewInnerDiv img {
+  height:700px;
+  object-fit: contain;
+  object-position: bottom
+}
+#ReviewTextDiv {
+  float: right;
+  width: calc(100% - 300px - 100px);
+  margin-top: 100px;
+}
+#ReviewTextDiv .material-icons {
+  color: lightgray;
+  font-size: 100px;
+  margin-left: -20px;
+}
+#ReviewTextDiv p {
+  font-size: 22px;
+  line-height: 150%;
+  color: dimgray;
+  text-align: justify;
+  margin-top: 0px;
+}
+#ReviewTextDiv label {
+  font-size: 35px;
+  font-weight: 300;
+}
+#ReviewTextDiv small {
+  display: block;
+  font-size: 15px;
+  padding-left: 10px;
+  color: dimgray;
+  padding-top: 5px;
+  font-weight: 400;
+}
+
+#FAQSec {
+  background: linear-gradient(#25fdb7 3%,#25d7fd);
+  position: relative;
+}
+#FAQSlantDiv {
+    transform:skew(0deg,5deg);
+  -ms-transform:skew(0deg,5deg); 
+  -webkit-transform:skew(0deg,5deg);
+  transform-origin:right;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  background: #25fdb7;
+  z-index: 2;
+}
+#FAQInnerDiv {
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 90%;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  overflow: hidden;
+  
+}
+#FAQTitle {
+  font-size: 150px;
+  font-weight: 100;
+  color: white;
+  letter-spacing: 20px;
+  text-align: center;
+  margin: 0;
+  margin-top: -100px;
+  margin-bottom: 120px;
+}
+.FAQItem {
+  width: 80%;
+  background: white;
+  padding: 0px 30px;
+  margin-bottom: 45px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+  border-left: solid 10px #b725fd;
+  
+}
+.FAQItem p {
+  font-size: 30px;
+  line-height: 150%;
+  padding-right: 40px;
+  margin-top: 17px;
+}
+.FAQItem label {
+  color: lightgray;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-left: -15px;
+  width: 100%;
+  display: block;
+  padding-top:10px;
+}
+.FAQQuestion {
+  float: left;
+  clear: both;
+  border-top-left-radius: 0px;
+}
+.FAQAnswer label {
+  text-align: right;
+  margin-left: 15px;
+  
+}
+.FAQAnswer div {
+  font-size: 20px;
+  line-height: 150%;
+  padding-right: 40px;
+  padding: 30px 0px;
+  padding-top: 20px;
+}
+.FAQAnswer {
+  float: right;
+  clear: both;
+  border-top-right-radius: 0px;
+  border-left: none;
+  border-right: solid 10px #fd256b;
+}
+.FAQAnswer ul {
+  margin: 0;
+}
+.FAQBreak {
+  height: 100px;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  
+}
+
+
+#CTASec {
+  height: 800px;
+  position: relative;
+  background-image: url(img/WhiteCity.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(240,240,240);
+  padding-bottom: 100px;
+
+}
+#CTASlantDiv {
+  
+  transform:skew(0deg,5deg);
+  -ms-transform:skew(0deg,5deg); 
+  -webkit-transform:skew(0deg,5deg);
+  transform-origin:right;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  overflow: hidden;
+  background: white;
+}
+#CTASlantDiv:before {
+  content: " ";
+  background-image: url(img/WhiteCity.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center calc(50% + 73px);
+  position: absolute;
+  top: -100px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  transform: skew(0deg,-5deg);
+  height: 200%;
+  background-color: rgb(240,240,240);
+}
+
+
+.CTASecDiv {
+  margin: 0 auto;
+  border-radius: 50px !important;
+  padding: 35px !important;
+  box-shadow: 0 0px 200px rgba(0,0,0,0.2), 0 2px 5px rgba(0,0,0,0.15) !important;
+}
+
+footer {
+
+  padding: 12px 0px;
+  background: white;
+  line-height: 30px;
+  padding-right: 25px;
+  overflow: hidden;
+  box-shadow: inset 0 0px 3px rgba(0,0,0,0.2);
+}
+footer a {
+  float: right;
+  padding: 0 20px;
+  font-size: 12px;
+  color: gray;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+footer a:hover {
+  color: black;
+}
+#Copyright {
+  float: left;
+  padding-left: 25px;
+  color: lightgray;
+  
+}
+#SocialDiv {
+  border-left: solid 1px lightgray;
+  overflow: hidden;
+  float: right;
+  padding-left: 25px;
+  margin-left: 15px;
+}
+#SocialDiv a {
+  fill: gray;
+   width: 30px;
+        height: 30px;
+  padding: 0 10px;
+  transition: fill 0.2s;
+}
+#SocialDiv a:hover {
+  fill: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
