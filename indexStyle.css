@@ -126,7 +126,7 @@ align-items: center;
 }
 #ChooseInfoDiv p {
   float: left;
-  color: lightgray;
+  color: gray;
   width: calc(50% - 41px);
   padding: 0px 20px;
   line-height: 150%;
