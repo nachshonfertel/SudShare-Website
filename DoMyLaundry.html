@@ -3,7 +3,7 @@
 
 <head>
 
-  <link href="contactStyle.css" type="text/css" rel="stylesheet">
+  <link href="DoMyLaundryStyle.css" type="text/css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,500,700,900" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -16,47 +16,47 @@
 
 <body>
 
+  
+  <section id="CTASec">
+    
+    <img id="Logo" src="img/SudShareLogoWhite.png">
+  
+    <h1 id="CTATitle"><b>Got Laundry?</b> Just Tap the App and it’s Done.</h1>
+    <h2 id="CTASubtitle">Wash, Dry, &amp; Fold | Free Pick Up &amp; Delivery | Money Back Guarantee | Damage or Loss Protection | Only $1/LB</h2>
+    
+    
+    <div id="HomeCTADiv">
 
-  <section id="ContactSec">
-    
-    <a href="index.html"><img id="Logo" src="img/SudShareLogo-Black-transparent.png"></a>
-  
-    <div id="ContactLeftDiv" class="valign">
-    
-      <div id="CL-InnerDiv">
-      
-        <h1>Say Hello.</h1>
-        
-        <div id="CL-SmallInputDiv">
-          <input id="NameInput" type="text" placeholder="Name">
-          <input id="EmailInput" type="text" placeholder="Email">
+        <h1>Download the App</h1>
+
+
+        <div id="HomeCTATextDiv">
+
+          <span id="HomeCTALoadingParent">
+            <div id="HomeCTALoadingDiv"></div>
+            <label id="HomeCTALoadingText">Sending...</label>
+            </span>
+
+          <span id="HomeCTAInputParent">
+              <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="(000)-000-0000">
+              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Text Me A Link</button>
+            </span>
+
         </div>
-        
-        <textarea id="MessageInput" placeholder="Type your message."></textarea>
-        
-        <button onclick="SubmitEmail()">Submit <i class="material-icons">&#xE163;</i></button>
-        
-        <label id="LoadingLabel"></label>
-      
+
+        <a target="_blank" href="https://goo.gl/yAyZxE"><img src="img/AppStore.png"></a>
+        <a target="_blank" href="https://goo.gl/gvtWtR"><img src="img/GooglePlay.png"></a>
+
       </div>
     
+
+    <div id="CTAArrowDiv">
+      <label>Learn More</label>
+      <i class="material-icons">&#xE313;</i>
     </div>
     
-    <div id="ContactRightDiv" class="valign">
-    
-      <div id="CR-InnerDiv">
       
-        <a href="tel:410-624-5747"><i class="material-icons">&#xE0CD;</i>410-624-5747</a>
-        
-        <a href="mailto:hello@sudshare.com"><i class="material-icons">&#xE0BE;</i>hello@sudshare.com</a>
-        
-        <a target="_blank" href="https://www.google.com/maps?q=4701b+falls+rd+baltimore+md"><i class="material-icons">&#xE0C8;</i>4701-b Falls Rd,<br> &nbsp;&nbsp;&nbsp;&nbsp;Baltimore, MD 21209</a>
-                
-      </div>
-    
-    </div>
-  
-  </section>
+  </section>  
   
 
 </body>

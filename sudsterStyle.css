@@ -23,6 +23,60 @@ display: flex;
 align-items: center;
   
 }
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
 
 #HomeInnerDiv {
   height: 650px;
@@ -34,7 +88,7 @@ align-items: center;
 }
 #HomeInnerDiv h1 {
   font-weight: 200;
-  font-size: 42px;
+  font-size: 45px;
   margin-top: 30px;
   margin-bottom: 0px;
   line-height: 150%;
@@ -68,7 +122,7 @@ align-items: center;
 }
 #LogoImg {
   width: 250px;
-  margin-top: 80px;
+  margin-top: 75px;
 
 }
 
@@ -76,20 +130,46 @@ align-items: center;
   width: 400px;
   text-align: center;
   padding-bottom: 15px;
-  margin-top: 40px;
+  margin-top: 35px;
   background: white;
   box-shadow: 0 5px 35px rgba(0,0,0,0.2);
   padding: 20px;
   border-radius: 5px;
 }
 #HomeCTADiv h1 {
-  font-weight: 300;
+  font-weight: 400;
   color: #21e3a4;
-  font-size: 35px;
-  letter-spacing: 2px;
+  font-size: 22px;
+  letter-spacing: 3px;
   margin-bottom: 20px;
   display: block;
   margin-top: 0px;
+  line-height: 125%;
+
+}
+
+#HomeInstantDiv {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  height: 17px;
+  padding: 5px;
+  background: white;
+  width: 185px;
+  color: dimgray;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+#HomeInstantDiv b {
+  background: #fd25d7;
+  font-size: 11px;
+  color: white;
+  letter-spacing: 1px;
+  padding: 3px 5px;
+  border-radius: 20px;
+  position: relative;
+  top: -1px;
+  margin-right: 5px;
 }
 
 #HomeCTATextDiv {
@@ -98,7 +178,7 @@ align-items: center;
   height: 50px;
   border-radius: 50px;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   background: white;
 }
 #HomeCTATextDiv input {
@@ -109,12 +189,13 @@ align-items: center;
   font-size: 22px;
   float: left;
   margin-top: -1px;
+  background: none;
   
 }
 #HomeCTATextDiv button {
   height: 100%;
   border: none;
-  background: #21e3a4;
+  background: #fd256b;
   float: right;
   width: 165px;
   color: white;
@@ -122,6 +203,11 @@ align-items: center;
   font-size: 15px;
   letter-spacing: 1px;
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+#HomeCTAInfoLabel {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 #HomeCTADiv a {
 

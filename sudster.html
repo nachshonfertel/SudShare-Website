@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,500,700,900" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="res/ScrollMagic.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase-firestore.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbnx8mcEDXIG3_1Nt55xBlNm6IVllEXn8&libraries=places">
@@ -23,15 +22,15 @@
     <div id="HomeInnerDiv">
 
       <a href="index.html"><img src="img/SudsterLogo.jpg" id="LogoImg"></a>
-      <h1>Work from Home doing Laundry<br>and Earn up to $20/Hour</h1>
-      <h2>Be Your Own Boss | Make Your Own Schedule | Get Paid Instantly.</h2>
+      <h1>Work from Home doing Laundry<br>and Earn up to $20/Hour.</h1>
 
-
+      <div id="HomeInstantDiv"><b>NEW</b> Get Paid Instantly!</div>
+      
       <div id="HomeCTADiv">
 
-        <h1>JOIN THE TEAM</h1>
+        <h1>You are the boss.<br>Work when you want.<br>Earn what you need.</h1>
 
-
+        
         <div id="HomeCTATextDiv">
 
           <span id="HomeCTALoadingParent">
@@ -40,14 +39,13 @@
             </span>
 
           <span id="HomeCTAInputParent">
-              <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="(000)-000-0000">
-              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Text Me A Link</button>
+              <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="(000) 000-0000">
+              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">JOIN THE TEAM</button>
             </span>
 
         </div>
-
-        <a href="http://goo.gl/LyPtrB"><img src="img/AppStore.png"></a>
-        <a href="http://goo.gl/kggr3H"><img src="img/GooglePlay.png"></a>
+        
+        <label id="HomeCTAInfoLabel">We'll text you a link to download the app.</label>
 
       </div>
 
@@ -77,7 +75,7 @@
         <div id="HIWItemLeftDiv">
           <h1><label style="background: #fd25d7">1</label>Sign-Up</h1>
 
-          <h2>Simply fill in the form and go though the startup process.</h2>
+          <h2>Simply fill in the form and go though the startup process. (Takes less than 5 Minutes)</h2>
         </div>
 
         <img id="HIWScreenshot" src="img/HIWScreenshot1.png">
@@ -177,7 +175,7 @@
         <p>What are my hours and work area?</p>
       </div>
       <div class="FAQItem FAQAnswer"><label>ANSWER</label>
-        <div>That’s up to you. This is your business. You’re the boss. You set your hours. Work when you want. Take off when you feel like it. And work the area you want too.</div>
+        <div>That’s up to you. You’re the boss. You set your hours and your work area. Work when you want; take off when you feel like it.</div>
       </div>
 
       <b class="FAQBreak"></b>
@@ -214,6 +212,17 @@
             <li>Scale</li>
             <li>Plastic Bags</li>
           </ul>
+        </div>
+      </div>
+      
+      <b class="FAQBreak"></b>
+
+      <div class="FAQItem FAQQuestion"><label>QUESTION</label>
+        <p>How does Sudshare make money?</p>
+      </div>
+      <div class="FAQItem FAQAnswer"><label>ANSWER</label>
+        <div>
+          SudShare customers pay $1/LB. SudShare pays you 80% and keeps 20%.
         </div>
       </div>
 
@@ -405,9 +414,13 @@
   </div>
 
   <a>ABOUT</a>
-  <a>CONTACT</a>
+  <a href="contact.html">CONTACT</a>
   <a onclick="ToggleLocationPopup()">LOCATIONS</a>
   <small id="Copyright">&copy; SudShare, Inc.</small>
+  
+   <a href="http://goo.gl/LyPtrB"><img src="img/AppStore.png"></a>
+   <a href="http://goo.gl/kggr3H"><img src="img/GooglePlay.png"></a>
+  
 </footer>
 
 <script>
@@ -445,7 +458,18 @@
       });
 
     }
+    else {
+      ShakeElement($("#PhoneNumberInput1"));
+      ShakeElement($("#PhoneNumberInput2"));
+    }
 
+  }
+  
+  function ShakeElement(Element) {
+    $(Element).addClass("shake animated");
+    setTimeout(function () {
+      $(Element).removeClass("shake animated");
+    }, 1000)
   }
   
 </script>

@@ -40,7 +40,7 @@ align-items: center;
   opacity: 0;
   transform: scale(2.5);
   transition: all 1.5s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in;
 
 }
 
