@@ -10,6 +10,7 @@ body {
   margin: 0 auto;
   box-shadow: 0 0px 30px rgba(0,0,0,0.25);
   overflow-x: hidden;
+  margin-bottom: 95px;
 }
 
 .valign {
@@ -88,7 +89,7 @@ align-items: center;
 }
 #HomeInnerDiv h1 {
   font-weight: 200;
-  font-size: 45px;
+  font-size: 3vw;
   margin-top: 30px;
   margin-bottom: 0px;
   line-height: 150%;
@@ -129,7 +130,7 @@ align-items: center;
 #HomeCTADiv {
   width: 420px;
   text-align: center;
-  margin-top: 110px;
+  margin-top: 100px;
   background: white;
   box-shadow: 0 15px 50px rgba(0,0,0,0.3);
   border-radius: 5px;
@@ -137,7 +138,7 @@ align-items: center;
   transition: all 0.3s;
   overflow: hidden;
   position: relative;
-  background: rgb(230,230,230);
+  background: #fd256b;
 }
 #HomeCTADiv:hover {
  
@@ -162,6 +163,7 @@ align-items: center;
   transition-timing-function: ease-in;
   transform: perspective(500px);
   transform-origin: bottom;
+  cursor: pointer;
 }
 
 #HomeCTAExpandDiv {
@@ -169,8 +171,8 @@ align-items: center;
   transition-timing-function: ease-in;
   transform: perspective(500px) rotateX(-90deg);
   transform-origin: top;
-  background: white;
   padding-bottom: 20px;
+  background: #fd256b;
 }
 #HomeCTALabel {
   font-size: 13px;
@@ -178,7 +180,7 @@ align-items: center;
   width: 350px;
   display: block;
   margin: 0 auto;
-  color: dimgray;
+  color: white;
   padding-top: 13px;
   padding-bottom: 13px;
   
@@ -230,21 +232,24 @@ align-items: center;
 #HomeCTATextDiv button {
   height: 100%;
   border: none;
-  background: #fd256b;
+  background: white;
   float: right;
   width: 165px;
-  color: white;
+  color: #fd256b;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 1px;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.4s;
   position: absolute;
   z-index: 2;
   right: 0;
 }
-
+#HomeCTATextDiv button:hover {
+  letter-spacing: 2px;
+  text-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
 
 
 #HomeCTAInfoLabel {
@@ -446,6 +451,8 @@ align-items: center;
 #ReviewSec {
   height: 700px;
   position: relative;
+  background: white;
+  background: white;
 }
 #ReviewSlantDiv {
    transform:skew(0deg,5deg);
@@ -879,7 +886,12 @@ margin: 0px auto;
 
 footer {
 
-  padding: 25px 0px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  padding: 30px 0px;
   background: #101010;
   line-height: 30px;
   padding-right: 25px;
@@ -904,12 +916,13 @@ footer a {
   cursor: pointer;
   transition: all 0.2s;
   text-decoration: none;
+  text-transform: uppercase;
 }
 footer a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
-#Copyright {
+#FooterCopyright {
   float: left;
   padding-left: 25px;
   color: white;
