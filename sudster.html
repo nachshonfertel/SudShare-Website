@@ -17,6 +17,7 @@
 
 <body>
 
+  
   <section id="HomeSec">
 
     <div id="HomeInnerDiv">
@@ -24,14 +25,22 @@
       <a href="index.html"><img src="img/SudsterLogo.jpg" id="LogoImg"></a>
       <h1>Work from Home doing Laundry<br>and Earn up to $20/Hour.</h1>
 
-      <div id="HomeInstantDiv"><b>NEW</b> Get Paid Instantly!</div>
+      <div id="HomeFeaturesDiv" style="background: #25d7fd;">Be Your Own Boss</div>
       
-      <div id="HomeCTADiv">
-
-        <h1>You are the boss.<br>Work when you want.<br>Earn what you need.</h1>
-
+      <div id="HomeFeaturesDiv" style="background: #ffd800;">Work When You Want</div>
+      
+      <div id="HomeFeaturesDiv" style="background: #fd25d7;">Get Paid Instantly</div>
+            
+      <div id="HomeCTADiv" onclick="ClickCTAButton(this.id)">
+                
+        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)'); setTimeout(function(){$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)">Join The Team</button>
         
-        <div id="HomeCTATextDiv">
+        
+        <div id="HomeCTAExpandDiv">
+
+          <label id="HomeCTALabel">Enter your number to receive a download link.</label>
+        
+          <div id="HomeCTATextDiv">
 
           <span id="HomeCTALoadingParent">
             <div id="HomeCTALoadingDiv"></div>
@@ -39,14 +48,14 @@
             </span>
 
           <span id="HomeCTAInputParent">
-              <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="(000) 000-0000">
-              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">JOIN THE TEAM</button>
-            </span>
+              <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="000-000-0000">
+              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Text Me A Link</button>
+          </span>
 
         </div>
         
-        <label id="HomeCTAInfoLabel">We'll text you a link to download the app.</label>
-
+        </div>
+        
       </div>
 
     </div>
@@ -279,7 +288,8 @@
     </div>
 
   </section>
-  
+
+
 
 </body>
 
@@ -402,6 +412,9 @@
 
 
 <footer>
+  
+  <a class="AppStoreIcon" href="http://goo.gl/LyPtrB"><img src="img/AppStore.png"></a>
+   <a class="AppStoreIcon" href="http://goo.gl/kggr3H"><img src="img/GooglePlay.png"></a>
 
   <div id="SocialDiv">
     <a target="_blank" href=""><svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg></a>
@@ -416,14 +429,15 @@
   <a>ABOUT</a>
   <a href="contact.html">CONTACT</a>
   <a onclick="ToggleLocationPopup()">LOCATIONS</a>
+  
   <small id="Copyright">&copy; SudShare, Inc.</small>
   
-   <a href="http://goo.gl/LyPtrB"><img src="img/AppStore.png"></a>
-   <a href="http://goo.gl/kggr3H"><img src="img/GooglePlay.png"></a>
+   
   
 </footer>
 
 <script>
+  
   
   $(function() {
 
@@ -459,8 +473,9 @@
 
     }
     else {
-      ShakeElement($("#PhoneNumberInput1"));
-      ShakeElement($("#PhoneNumberInput2"));
+         ShakeElement($("#PhoneNumberInput1"));
+        ShakeElement($("#PhoneNumberInput2"));
+      
     }
 
   }
@@ -470,6 +485,12 @@
     setTimeout(function () {
       $(Element).removeClass("shake animated");
     }, 1000)
+  }
+  
+  function ClickCTAButton(CTADiv) {
+   
+    
+    
   }
   
 </script>

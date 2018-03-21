@@ -39,10 +39,6 @@ align-items: center;
   height: 900px;
   background-color: #25d7fd;
   padding-top: 60px;
-  background-image: url(img/ColorfulShirtsDoubleArtboard%201.png);
-  background-position: center calc(100%) ;
-  background-repeat: no-repeat; 
-  background-size: contain;
   position: relative;
 }
 #CTATitle {
