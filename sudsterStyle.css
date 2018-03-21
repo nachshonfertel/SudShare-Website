@@ -132,6 +132,7 @@ align-items: center;
   overflow: hidden;
   position: relative;
   background: #fd256b;
+  height: 110px;
 }
 #HomeCTADiv:hover {
  
