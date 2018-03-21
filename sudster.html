@@ -23,7 +23,7 @@
     <div id="HomeInnerDiv">
 
       <a href="index.html"><img src="img/SudsterLogo.jpg" id="LogoImg"></a>
-      <h1>Work from Home doing Laundry<br>and Earn up to $20/Hour.</h1>
+      <h1 id="HomeTitle">Work from Home doing Laundry<br>and Earn up to $20/Hour.</h1>
 
       <div id="HomeFeaturesDiv" style="background: #25d7fd;">Be Your Own Boss</div>
       
@@ -33,12 +33,13 @@
             
       <div id="HomeCTADiv" onclick="ClickCTAButton(this.id)">
                 
-        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)'); setTimeout(function(){$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)">Join The Team</button>
+        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#HomeCTADiv').css('height','160px');$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)">START NOW</button>
         
         
         <div id="HomeCTAExpandDiv">
 
-          <label id="HomeCTALabel">Enter Your Cell Phone and We’ll Text You a Link</label>
+          <h1 id="HomeCTAExpandDivTitle">Download the App to Begin</h1>
+          <h2 id="HomeCTAExpandDivSubtitle">Enter Your Cell Phone and We’ll Text You a Link</h2>
         
           <div id="HomeCTATextDiv">
 
@@ -49,7 +50,7 @@
 
           <span id="HomeCTAInputParent">
               <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="000-000-0000">
-              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Start Now</button>
+              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Text Me</button>
           </span>
 
         </div>
