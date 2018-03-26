@@ -31,9 +31,9 @@
       
       <div id="HomeFeaturesDiv" style="background: #fd25d7;">Get Paid Instantly</div>
             
-      <div id="HomeCTADiv" onclick="ClickCTAButton(this.id)">
+      <div id="HomeCTADiv">
                 
-        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#HomeCTADiv').css('height','160px');$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)">START NOW</button>
+        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#HomeCTADiv').css('height','160px');$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)"></button>
         
         
         <div id="HomeCTAExpandDiv">
@@ -165,8 +165,8 @@
 
       <div id="ReviewTextDiv">
         <i class="material-icons">&#xE244;</i>
-        <p>Some text is this just placement for the website so this is like lorem ipsum just testing this placement of the text and area size.Some text is this just placement for the website so this is like lorem ipsum just testing this placement of the text and area size.</p>
-        <label>Nachshon F.<small>Baltimore, MD</small></label>
+        <p>For me Sudshare is an easy way to make extra money on my time. The app is clear and easy to use. Money transferred into my account as expected. This is the greatest idea since Uber!</p>
+        <label>Amanda Nudell</label>
       </div>
 
     </div>
@@ -263,29 +263,44 @@
 
     <div id="CTASlantDiv"></div>    
     
-    <div id="CTADiv">
+     <div id="CTASInnerDiv">
+       
+      <div id="CTASTextDiv">
       
-      <h1>JOIN THE TEAM</h1>
+      <h1 id="CTASTitle">Make Money with Your Washer-Dryer.<br>Sign Up, Accept a Job, & Get Paid Immediately</h1>
+      
+      <h2 id="CTASJoinText">JOIN THE TEAM</h2>
+      
+      <div id="CTASDiv">
+                
+        <button id="CTASFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#CTASDiv').css('height','160px');$(this).css('display','none');$('#CTASExpandDiv').css('transform','none')},150)">START NOW</button>
+        
+        
+        <div id="CTASExpandDiv">
 
-      <h2>Make Money with Your Washer-Dryer.<br>Sign Up, Accept a Job, & Get Paid Immediately</h2>
+          <h1 id="CTASExpandDivTitle">Download the App to Begin</h1>
+          <h2 id="CTASExpandDivSubtitle">Enter Your Cell Phone and We’ll Text You a Link</h2>
+        
+          <div id="CTASTextDiv">
 
-
-      <div id="CTATextDiv">
-
-        <span id="CTALoadingParent">
-            <div id="CTALoadingDiv"></div>
-            <label id="CTALoadingText">Sending...</label>
+          <span id="CTASLoadingParent">
+            <div id="CTASLoadingDiv"></div>
+            <label id="CTASLoadingText">Sending...</label>
             </span>
 
-        <span id="CTAInputParent">
-              <input id="PhoneNumberInput2" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="(000)-000-0000">
-              <button onclick="TextDownloadLink($('#PhoneNumberInput2').val())">Text Me A Link</button>
-            </span>
+          <span id="CTASInputParent">
+              <input id="PhoneNumberInput2" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="000-000-0000">
+              <button onclick="TextDownloadLink($('#PhoneNumberInput2').val())">Text Me</button>
+          </span>
 
+        </div>
+        
+        </div>
+        
       </div>
-      <a href="http://goo.gl/LyPtrB"><img src="img/AppStore.png"></a>
-      <a href="http://goo.gl/kggr3H"><img src="img/GooglePlay.png"></a>
-
+    
+      </div>
+       
     </div>
 
   </section>
@@ -493,11 +508,6 @@
     }, 1000)
   }
   
-  function ClickCTAButton(CTADiv) {
-   
-    
-    
-  }
   
 </script>
 
