@@ -33,7 +33,7 @@
             
       <div id="HomeCTADiv">
                 
-        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#HomeCTADiv').css('height','160px');$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)"></button>
+        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#HomeCTADiv').css('height','160px');$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)">START NOW</button>
         
         
         <div id="HomeCTAExpandDiv">
@@ -50,7 +50,7 @@
 
           <span id="HomeCTAInputParent">
               <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="000-000-0000">
-              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Text Me</button>
+              <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Text Me<i class="material-icons">&#xE315;</i></button>
           </span>
 
         </div>
@@ -161,7 +161,7 @@
     <div id="ReviewSlantDiv"></div>
 
     <div id="ReviewInnerDiv">
-      <img src="img/ReviewPersonPlaceholder.jpg">
+      <img src="img/ReviewPortrait.jpg">
 
       <div id="ReviewTextDiv">
         <i class="material-icons">&#xE244;</i>
@@ -259,21 +259,21 @@
 
   </section>
 
-  <section id="CTASec" class="valign">
+  <section id="CTASec">
 
     <div id="CTASlantDiv"></div>    
     
-     <div id="CTASInnerDiv">
+     <div id="CTASInnerDiv" class="valign">
        
-      <div id="CTASTextDiv">
+      <div id="CTASRightDiv">
       
-      <h1 id="CTASTitle">Make Money with Your Washer-Dryer.<br>Sign Up, Accept a Job, & Get Paid Immediately</h1>
+        <h1 id="CTASTitle">Make Money with Your Washer-Dryer.<small>Sign Up, Accept a Job, & Get Paid Immediately.</small></h1>
       
       <h2 id="CTASJoinText">JOIN THE TEAM</h2>
       
       <div id="CTASDiv">
                 
-        <button id="CTASFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#CTASDiv').css('height','160px');$(this).css('display','none');$('#CTASExpandDiv').css('transform','none')},150)">START NOW</button>
+        <button id="CTASFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#CTASDiv').css('height','160px');$('#CTASExpandDiv').css('transform','none')},150);setTimeout(function(){$('#CTASFirstButton').css('display','none');},400)">START NOW</button>
         
         
         <div id="CTASExpandDiv">
@@ -290,7 +290,7 @@
 
           <span id="CTASInputParent">
               <input id="PhoneNumberInput2" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="000-000-0000">
-              <button onclick="TextDownloadLink($('#PhoneNumberInput2').val())">Text Me</button>
+              <button onclick="TextDownloadLink($('#PhoneNumberInput2').val())">Text Me <i class="material-icons">&#xE315;</i></button>
           </span>
 
         </div>
