@@ -26,10 +26,9 @@ align-items: center;
 
 
 #CTASec {
-  overflow: hidden;
-  height: 850px;
+  height: 100%;
   background-color: #25d7fd;
-  padding-top: 70px;
+  padding-top: 80px;
   position: relative;
   position: fixed;
   left: 0;
@@ -38,65 +37,7 @@ align-items: center;
   bottom: 0;
   z-index: -1;
 }
-#CTAArrowDiv {
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - 50px);
-  width: 100px;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-}
-#CTAArrowDiv {
-  font-size: 12px;
-  letter-spacing: 1px;
-}
 
-#CTAFeatureDiv {
-  background: #50dffd;
-  border-radius: 50px;
-  border-top-left-radius: 0px;
-  height: 50px;
-  width: 350px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  overflow: hidden;
-  text-align: center;
-  font-size: 23px;
-  color: white;
-  line-height: 50px;
-  margin-top: 0px;
-  margin-left: 10px;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-@keyframes CTAFeatureScroll {
-  0%, 10% {
-    margin-top: 0px;
-  }
-  13%, 27% {
-    margin-top: calc(-50px * 1);;
-  }
-  30%, 45% {
-    margin-top: calc(-50px * 2);
-  }
-   48%, 63% {
-    margin-top: calc(-50px * 3);
-  }
-   66%, 82% {
-    margin-top: calc(-50px * 4);
-  }
-   85%, 97% {
-    margin-top: calc(-50px * 5);
-  }
-  100% {
-    margin-top: calc(-50px * 6);
-  }
-}
-#CTAFeatureScrollDiv {
-   animation: CTAFeatureScroll;
-  animation-iteration-count: infinite;
-  animation-duration: 12s;
-  animation-timing-function: cubic-bezier(0,0,.5,1.54);
-}
 
 #CTASideDiv {
   float: left;
@@ -119,28 +60,61 @@ align-items: center;
   font-weight: 200;
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
   color: white;
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 25px;
 }
 #CTATitle small {
   display: block;
   font-weight: 400;
-  font-size: 34px;
+  font-size: 27px;
   padding-left: 15px;
   margin-top: -12px;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
 }
 #CTAHeroImg {
   width: 800px;
   position: absolute;
   right: -375px;
-  top: -30px;
+  top: 0px;
+
+}
+.CTAFeature {
+  display: block;
+  float: left;
+  height: 30px;
+  background:rgba(255, 255, 255, 0.12);
+  border-radius: 5px;
+  margin: 0 10px;
+  width: 110px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 125%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+  margin-top: 20px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.35);
+  overflow: hidden;
 }
 
+
+#CTABreak {
+  height: 1px;
+  width: 450px;;
+  display: block;
+
+  background: linear-gradient(to right,#25d7fd,rgba(255, 255, 255, 0.5), #25d7fd);
+  clear: both;
+}
+
+
 #HIWSec {
-  margin-top: 800px;
+  margin-top: 825px;
   background: white;
-  height: 1000px;
+  padding-top:10px;
+  padding-bottom: 250px;
 }
 #HIWSlantDiv {
   transform:skew(0deg,-5deg);
@@ -155,22 +129,78 @@ align-items: center;
   left: 0;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.15);
 }
+#HIWTitle {
+  text-align: center;
+  position: relative;
+  font-size: 150px;
+  font-weight: 100;
+  margin-bottom: 150px;
+  color: dimgray;
+}
+.HIWItemDiv {
+  width: 90%;
+  max-width: 1200px;
+  height: 350px;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 20px 80px rgba(0,0,0,0.08);
+  margin-top: 200px;
+  overflow: hidden;
+  border-right: solid 20px rgba(255,255,255,0.35);
+}
+.HIWItemDiv label {
+  font-size: 440px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.35);
+  display: block;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  line-height: 78%;
+  width: 275px;
+  text-align: center;
+}
+.HIWItemDiv h1{
+
+  font-size: 100px;
+  font-weight: 200;
+  color: white;
+  padding-left: 300px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+
+}
+.HIWItemDiv p {
+  padding-left: 300px;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 150%;
+  font-size: 20px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+}
 
 #HomeCTADiv {
   width: 450px;
   text-align: center;
-  margin-top: 70px;
-  box-shadow:  0 0px 30px rgba(255,255,255,0.5);
+  margin-top: 30px;
   background: #fd25d7;
   border-radius:10px;
   transition: all 0.3s;
   overflow: hidden;
   position: relative;
   height: 115px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  
   
 }
-#HomeCTADiv:hover {
-    box-shadow: 0 50px 80px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.2);
+#HomeCTADiv:hover #HomeCTAFirstButton{
+    
+  letter-spacing:5px;
+  
 }
 #HomeCTAFirstButton {
   position: absolute;
@@ -186,15 +216,15 @@ align-items: center;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
-  transition: all 0.4s;
-  transition-timing-function: ease-in;
+  transition: all 0.4s, letter-spacing 0.2s;
+  transition-timing-function: all ease-in, letter-spacing ease;
   transform: perspective(500px);
   transform-origin: bottom;
   cursor: pointer;
   border-radius: 10px;
   background: #fd25d7;
   text-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  
+
 }
 #HomeCTAExpandDiv {
   transition: all 0.4s;
@@ -203,6 +233,7 @@ align-items: center;
   transform-origin: top;
   padding-bottom: 20px;
   background: #fd25d7;
+  overflow: hidden;
 }
 #HomeCTAExpandDivTitle {
   font-size: 25px;
@@ -342,16 +373,566 @@ align-items: center;
   display: block;
 }
 
+#PerfectionSec {
+  background: white;
+  overflow: hidden;
+  position: relative;
+  height: 600px;
+
+}
+#PerfectionSec img{
+  margin-left: -10px;
+  width: 650px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+#PerfectionInnerDiv {
+  position: relative;
+  z-index: 2;
+  margin-left: calc(50% - 620px);
+  width: 600px;
+}
+#PerfectionSec h1 {
+  text-align: center;
+  font-size: 61px;
+  font-weight: 200;
+  margin-top: 0px;
+ 
+  
+}
+#PerfectionSec p {
+  line-height: 170%;
+  text-align: justify;
+  font-size: 17px;
+  color: dimgray;
+}
+
+#CustomizedSec {
+  height: 650px;
+  background: #fd25d7;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+#CustomizedSec h1 {
+  font-weight: 200;
+  font-size: 75px;
+  color: white;
+  width: 750px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:0px;
+  float: right;
+  margin-top: 120px;
+  padding-bottom: 15px;
+  border-radius: 50px;
+  padding-top: 10px;
+  border-bottom: solid 2px white;
+}
+#CustomizedSec p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 25px;
+  color: white;
+  width: 750px;
+  float: right;
+}
+#CustomizedSec img{
+  width: 400px;
+  float: left;
+}
+#CustomizedInnerDiv {
+  width: 90%;
+  max-width: 1175px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: -30px;
+ 
+}
+
+#ReviewSec {
+  height: 700px;
+  position: relative;
+  background: white;
+  background: white;
+}
+#ReviewSlantDiv {
+    box-shadow: 0 -1px 3px rgba(0,0,0,0.07);
+
+   transform:skew(0deg,5deg);
+  -ms-transform:skew(0deg,5deg); 
+  -webkit-transform:skew(0deg,5deg);
+  transform-origin:right;
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  left: 0;
+  background: white;
+}
+#ReviewInnerDiv {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  
+}
+#ReviewInnerDiv img {
+  height:650px;
+  object-fit: contain;
+  object-position: bottom;
+  position: relative;
+  z-index: 3;
+  top: -30px;
+  left: -20px;
+}
+#ReviewTextDiv {
+  float: right;
+  width: calc(100% - 450px);
+  margin-top: 100px;
+}
+#ReviewTextDiv .material-icons {
+  color: lightgray;
+  font-size: 100px;
+  margin-left: -20px;
+}
+#ReviewTextDiv p {
+  font-size: 20px;
+  line-height: 160%;
+  color: dimgray;
+  text-align: justify;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+#ReviewTextDiv label {
+  font-size: 35px;
+  font-weight: 300;
+}
+#ReviewTextDiv small {
+  display: block;
+  font-size: 15px;
+  padding-left: 10px;
+  color: dimgray;
+  padding-top: 5px;
+  font-weight: 400;
+}
 
 
+#BeFreeSec {
+  height: 700px;
+  background: #ffeb3b;
+  position: relative;
+  padding-top: 50px;
+  
+ background: linear-gradient(90deg, #ffeb3b 20px, transparent 1%) center, linear-gradient(#ffeb3b 20px, transparent 10%) center, #e5d335;
+  background-size: 23px 23px;
+}
+#BeFreeSlantDiv {
+   transform:skew(0deg,5deg);
+  -ms-transform:skew(0deg,5deg); 
+  -webkit-transform:skew(0deg,5deg);
+  transform-origin:right;
+  height: 200px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  left: 0;
+  background: #ffeb3b;  
+  overflow: hidden;
+
+}
+#BeFreeSlantDiv:before {
+   transform:skew(0deg,-5deg);
+  content: '';
+  position: absolute;
+  top: -75px;
+  height: 608px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: linear-gradient(90deg, #ffeb3b 20px, transparent 1%) center, linear-gradient(#ffeb3b 20px, transparent 10%) center, #e5d335;
+  background-size: 23px 23px;
+  
+
+}
+#BeFreeInnerDiv {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+#BeFreeInnerDiv h1 {
+  font-size: 300px;
+  font-weight: 100;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  text-align: center;
+}
+#BeFreeInnerDiv h2 {
+  margin-top: 0px;
+  padding-left: 25px;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#FAQSec {
+  background: #25fdb7;
+  position: relative;
+    padding-top: 1px;
+  padding-bottom: 260px;
+}
+#FAQSlantDiv {
+    transform:skew(0deg,5deg);
+  -ms-transform:skew(0deg,5deg); 
+  -webkit-transform:skew(0deg,5deg);
+  transform-origin:right;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  background: #25fdb7;
+  z-index: 2;
+}
+#FAQInnerDiv {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 90%;
+  overflow: hidden;
+
+}
+#FAQTitle {
+  font-size: 175px;
+  font-weight: 200;
+  color: white;
+  letter-spacing: 20px;
+  text-align: center;
+  margin: 0;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.FAQItemDiv {
+  margin-bottom: -8px;
+  clear: both;
+  
+}
+.FAQItemDiv h1 {
+  background: white;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 15px 25px;
+  font-weight: 400;
+  font-size: 20px;
+  border-left: solid 10px #fd4b25;
+  transition: border-left-width 0.2s;
+}
+.FAQItemDiv h1:hover {
+  border-left-width: 15px;
+}
+
+.FAQItemDiv p {
+  font-size: 30px;
+  line-height: 150%;
+  padding-right: 40px;
+  margin-top: 17px;
+  display: none;
+  font-size: 18px;
+  overflow: hidden;
+  margin: 0;
+  padding: 25px;
+  width: 85%;
+  float: right;
+  margin-bottom: 50px;
+  background: white;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  border-right: solid 10px #fd4b25;
+  text-align: justify;
+  
+}
+.FAQItem label {
+  color: lightgray;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-left: -15px;
+  width: 100%;
+  display: block;
+  padding-top:10px;
+}
+.FAQQuestion {
+  float: left;
+  clear: both;
+  border-top-left-radius: 0px;
+}
+.FAQAnswer label {
+  text-align: right;
+  margin-left: 15px;
+  
+}
+.FAQAnswer div {
+  font-size: 20px;
+  line-height: 150%;
+  padding-right: 40px;
+  padding: 30px 0px;
+  padding-top: 20px;
+}
+.FAQAnswer {
+  float: right;
+  clear: both;
+  border-top-right-radius: 0px;
+  border-left: none;
+  border-right: solid 10px #fd256b;
+  position: relative;
+}
+.FAQAnswer ul {
+  margin: 0;
+}
+.FAQBreak {
+  height: 100px;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  
+}
+.FAQItemOpen p{
+  display: block;
+}
 
 
+.CTALSec {
+  position: relative !important;
+  height: 750px !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 2 !important;
+}
+#CTASlantDiv {
+   transform:skew(0deg,5deg);
+  -ms-transform:skew(0deg,5deg); 
+  -webkit-transform:skew(0deg,5deg);
+  transform-origin:4
+    ;
+  background: #25d7fd;
+  height: 300px;
+  position: absolute;
+  top: -100px;
+  right: 0;
+  left: 0;
+  box-shadow: 0 -7px 0px white;
+}
 
 
+#LocationPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0,0,0,0.7);
+  display: none;
+}
+
+#LocationInnerDiv {
+  background-color: rgb(245,245,245);
+  width: 425px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.25);
+  padding-top: 25px;
+  background-image: url(img/WhiteCitySmall.png);
+  background-attachment:local;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 65px;
+}
+#LocationInputDiv label{
+  
+  text-align: center;
+  display: block;
+  padding-top: 7px;
+  color: lightgray;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+#LocationInputDiv {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  width: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 30px;
+
+}
+#LocationInputDiv p{
+  display: none;
+  text-align: center;
+  padding: 10px 20px;
+  padding-top: 0px;
+  font-size: 15px;
+  line-height: 140%;
+}
+#GlobeDiv {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 5px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+margin: 0px auto;
+  margin-top: -80px;
+  position: relative;
+}
+#GlobeDiv b {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.2));
+  z-index: 2;
+}
+#GlobeDiv img {
+  height: 100%;
+  position: relative;
+  left: 0;
+  animation: GlobeSpin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+@keyframes GlobeSpin {
+  
+  from {
+    left: 0;
+  }
+  to {
+    left: -148px;
+  }
+  
+}
+#LocationInput {
+  text-align: center;
+  height: 55px;
+  width: 100%;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  font-weight: 300;
+  margin: 0 auto;
+  display: block;
+}
+#LocationClose {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 20px;
+  padding: 2px;
+  color: gray;
+  background: white;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+footer {
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  position: relative;
+  padding: 40px 0px;
+  background: #222222;
+  line-height: 30px;
+  padding-right: 25px;
+  overflow: hidden;
+  box-shadow: inset 0 0px 3px rgba(0,0,0,0.2);
+  text-align: center;
+  padding-bottom: 10px;
+}
+.AppStoreIcon {
+  height: 50px;
+  margin: 35px 20px;
+  margin-bottom: 10px;
+}
 
 
+#FooterCopyright {
+  color: white;
+  font-size: 14px;
+  display: block;
+  margin-top: 15px;
+}
 
+#SocialDiv {
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+#SocialDiv a {
+  fill: white;
+  width: 60px;
+  height: 60px;
+  padding: 0 10px;
+  transition: all 0.2s;
+  display: inline-block;
+  margin: 0 17px;
+  -webkit-filter: drop-shadow( 0px 1px 2px rgba(0,0,0,0.1)); 
+}
+#SocialDiv a:hover {
+  -webkit-filter: drop-shadow( 0px 5px 10px rgba(0,0,0,0.2)); 
+}
+#FooterLinkDiv {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+#FooterLinkDiv a {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  
+}
 
-
-
+#FooterLinkDiv .selected {
+  font-weight: 700;
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.2) !important;
+  letter-spacing: 2px;
+  background: none !important;
+  border-radius: 5px;
+  cursor: default;
+  text-shadow: none !important;
+  
+}
 
