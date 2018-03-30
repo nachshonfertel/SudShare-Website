@@ -16,135 +16,100 @@
 
 <body>
 
-
-  <section id="PresSec">
+  <section id="AboutSec" class="valign">
+    
+    <a href="index.html"><img id="Logo" src="img/SudShareLogo-Black-transparent.png"></a>
   
+    <div id="AboutInnerDiv">
+    <label class="SectionTitle">ABOUT</label>
+    <h1 id="AboutTitle">Reimagine Laundry</h1>
+    
+    <p id="AboutText">Some people want more time. Others want more money. When it comes to laundry, we can help each other. Welcome to Sudshare. As part of the sharing economy, Sudshare is a platform that connects people who don’t want to do
+laundry with people who want to earn extra money. Sudshare helps people turn their washer/dryer into an income producing asset that saves others from a time consuming chore.For some, Sudshare is a home-based business with a flexible work schedule. For others, it’s a time-
+saving service that makes laundry as simple as "click and done."</p>
+    
+    <div id="ChooseDiv">
+        <a><button id="CustomerButton" style="background: linear-gradient(90deg,#0cd2fd, #0cfdb0)">Do My Laundry</button></a>
+        <label>OR</label>
+        <a href="sudster.html"><button id="SudsterButton" style="background: linear-gradient(to right,#ffc107, #ed02c4);float: right;">Join The Team</button></a>
+    </div>
+      </div>
+    
+  </section>
+  
+  <section id="MissionSec" class="valign">
+  
+    <div id="MissionInnerDiv">
+    <label class="SectionTitle">Our Mission</label>
+    <p>Laundry has long been a dreaded chore. Our mission is to eliminate that chore and give you a choice:<br>Make laundry your business or give the business to someone else and be done with laundry forever.</p>
+    </div>
+      
+  </section>
+  
+  <section id="BeginSec">
+  
+    
+    <div id="BeginInnerDiv" class="valign">
+      
+      <img src="img/NF.jpg">
+      <h6 id="BeginName">Nachshon Fertel<br>President, SudShare Inc.</h6>
+    
+      <div id="BeginTextDiv">    
+        
+        <label class="SectionTitle">OUR BEGINNINGS</label>
+
+      <p><b>Nachshon Fertel</b> is a triplet and one of 5 siblings. When he was 16 years old three things were soaring:<br><br>
+        1. Uber’s popularity<br>
+        2. The piles of laundry in his home<br>
+        3. His interest in technology<br>
+      <br>The convergence of these led to Nachshon building an Uber-like app for laundry—and Sudshare was born. Nachshon was 17 years old when the app launched in Baltimore, Maryland.
+      </p>
+        
+    </div>
+      
+    </div>
+  
+  </section>
+  
+  <section id="BoardSec" class="valign">
+  
+    <div id="BoardInnerDiv">
+    <label class="SectionTitle">BOARD OF ADVISORS</label>
+    <br>
+    <a target="_blank" href="http://readingbuddysoftware.com"><div class="BoardItem">
+    
+      <img src="img/AF.png">
+      
+      <h1>Ari Fertel</h1>
+      <h2>Founder of Reading Buddy Software</h2>
+    
+      </div></a>
+    
+    <a target="_blank" href="http://btidevelopers.com"><div class="BoardItem">
+    
+      <img src="img/NB.png">
+      
+      <h1>Noah Breakstone</h1>
+      <h2>CEO of BTI Developers</h2>
+    
+      </div></a>
+    
+    <a target="_blank" href="http://readingbuddysoftware.com"><div class="BoardItem">
+    
+      <img src="img/NB.png">
+      
+      <h1>Placeholder</h1>
+      <h2>Placeholder</h2>
+    
+      </div></a>
+    </div>  
     
   
   </section>
-
-
-</body>
-
-<div id="LocationPopup" class="valign">
-    
-    <div id="LocationInnerDiv">
-
-      <i onclick="ToggleLocationPopup()" class="material-icons" id="LocationClose">&#xE5CD;</i>
-
-      <div id="GlobeDiv">
-        <b></b>
-        <img src="img/GlobeMap.jpg">
-      </div>
-
-      <div id="LocationInputDiv">
-      <label>Check if SudShare is in your area.</label>
-      <input oninput="CheckZipCode(this.value)" maxlength="5" id="LocationInput" type="tel" placeholder="Enter Zipcode">
-        
-        <p id="LocationYesAnswer"><b>YES!</b> We are in your area. Go ahead and download the app.</p>
-        <p id="LocationNoAnswer">Sorry, we are not in your area yet. But we'll be there soon!</p>
-        
-      </div>
-
-    </div>
   
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAbnx8mcEDXIG3_1Nt55xBlNm6IVllEXn8",
-        authDomain: "laundry-llama.firebaseapp.com",
-        databaseURL: "https://laundry-llama.firebaseio.com",
-        projectId: "laundry-llama",
-        storageBucket: "laundry-llama.appspot.com",
-        messagingSenderId: "79996270453"
-      };
-      firebase.initializeApp(config);
-      var geocoder = new google.maps.Geocoder();
-      var AvailableWorkArea;
-      var CFdatabase = firebase.firestore();
-      var LocationPopupOpen = false;
-      
-      $(function () {
-        CFdatabase.doc("Code/WorkArea").get().then(function (doc) {
-          AvailableWorkArea = doc.data().Circles;
-        });
-      });
-      
-      function CheckZipCode(Input) {
-
-        if (Input.length == 5) {
-          
-          $("#LocationLoading").css("display","block");
-          
-          geocoder.geocode({
-            'address': Input + ", USA"
-          }, function (data, status) {
-
-            var InArea = false;
-            for (var i = 0; i < AvailableWorkArea.length; i++) {
-
-              if (getDistance(data[0].geometry.location.lat(), data[0].geometry.location.lng(), AvailableWorkArea[i].Center.latitude, AvailableWorkArea[i].Center.longitude) <= AvailableWorkArea[i].Radius) {
-                InArea = true;
-              }
-
-            }
-
-
-            if (InArea) {
-              //Is in area
-              $("#LocationYesAnswer").css("display","block");
-              $("#LocationNoAnswer").css("display","none");
-            } else {
-              //Not in area
-              $("#LocationYesAnswer").css("display","none");
-              $("#LocationNoAnswer").css("display","block");
-            }
-
-
-
-          });
-        }
-        else {
-          $("#LocationYesAnswer").css("display","none");
-              $("#LocationNoAnswer").css("display","none");
-        }
-      }
-      function getDistance(lat1, lon1, lat2, lon2) {
-        var R = 6371; // Radius of the earth in km
-        var dLat = deg2rad(lat2 - lat1); // deg2rad below
-        var dLon = deg2rad(lon2 - lon1);
-        var a =
-          Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-          Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
-          Math.sin(dLon / 2) * Math.sin(dLon / 2);
-        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        var d = R * c; // Distance in km
-        var dm = d * 0.621371; //Distance in Mi
-        return dm;
-      }
-      function deg2rad(deg) {
-        return deg * (Math.PI / 180)
-      }
-      
-      function ToggleLocationPopup() {
-        if (LocationPopupOpen) {
-          $("#LocationPopup").css("display","none");
-          LocationPopupOpen = false;
-        }
-        else {
-          $("#LocationPopup").css("display","flex");
-          LocationPopupOpen = true;
-        }
-      }
-      
+  <footer>
   
-    </script>
-
-
-</div>
-
-
-<footer>
+  <img width="250px;" src="img/SudShareLogoWhite.png">
   
   <div id="SocialDiv">
     <a target="_blank" href=""><svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg></a>
@@ -172,7 +137,7 @@
   
 </footer>
 
-<script>
+  <script>
   
   
   $(function() {
@@ -225,5 +190,10 @@
   
   
 </script>
+
+
+</body>
+
+
 
 </html>
