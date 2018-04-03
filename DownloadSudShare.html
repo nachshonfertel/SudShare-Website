@@ -1,0 +1,20 @@
+<small>Loading...</small>
+<script>
+
+  
+
+  var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+  var android = /(android)/i.test(navigator.userAgent);
+
+  if (iOS) {
+    window.location.href = "https://itunes.apple.com/us/app/sudshare/id1333675995";
+  }
+  else if (android) {
+    window.location.href = "https://play.google.com/store/apps/details?id=com.sudshare.sudshare";
+  }
+  else {
+    alert("Sorry, It appears the SudShare app is not available on this device. Please open this link on an IOS or Android Device.")
+    window.location.href = "https://sudshare.com";
+  }
+
+</script>

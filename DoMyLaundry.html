@@ -25,33 +25,33 @@
 
         <img id="Logo" src="img/SudShareLogoWhite.png">
 
-        <h1 id="CTATitle">Got Laundry?<small>Just Tap the App. Done. Wash, Dry & Fold.</small></h1>
+        <h1 id="CTATitle">Got Laundry?<small>Just Tap the App & it's Done.</small></h1>
+        
         
                 <b id="CTABreak"></b>
 
+        <div class="CTAFeature">Wash, Dry<br>and Fold</div>
         <div class="CTAFeature" style=";letter-spacing: -0.5px;">Free Pickup & <br>Next Day Delivery</div>
-        <div class="CTAFeature">Money Back<br>Guarantee</div>
         <div class="CTAFeature">Simple Price:<br>Only $1/LB</div>
                 <b id="CTABreak"></b>
 
-        <div id="HomeCTADiv">
+        <div class="CTADiv" id="HomeCTADiv">
                 
-        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#HomeCTADiv').css('height','160px');$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)">GET IT DONE</button>
+        <button id="HomeCTAFirstButton" class="CTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#HomeCTADiv').css('height','160px');$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)">GET IT DONE</button>
         
-        
-        <div id="HomeCTAExpandDiv">
+        <div class="CTAExpandDiv" id="HomeCTAExpandDiv">
 
-          <h1 id="HomeCTAExpandDivTitle">Download the App to Begin</h1>
-          <h2 id="HomeCTAExpandDivSubtitle">Enter Your Cell Phone and We’ll Text You a Link</h2>
+          <h1 class="CTAExpandDivTitle">Download the App to Begin</h1>
+          <h2 class="CTAExpandDivSubtitle">Enter Your Cell Phone and We’ll Text You a Link</h2>
         
-          <div id="HomeCTATextDiv">
+          <div class="CTATextDiv">
 
-          <span id="HomeCTALoadingParent">
-            <div id="HomeCTALoadingDiv"></div>
-            <label id="HomeCTALoadingText">Sending...</label>
+          <span class="CTALoadingParent">
+            <div class="CTALoadingDiv"></div>
+            <label class="CTALoadingText">Sending...</label>
             </span>
 
-          <span id="HomeCTAInputParent">
+          <span class="CTAInputParent">
               <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="000-000-0000">
               <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Text Me<i class="material-icons">&#xE315;</i></button>
           </span>
@@ -103,7 +103,7 @@
       <label>3</label>
       
       <h1>Done!</h1>
-      <p>We’ll pick up your laundry, wash it, dry it, fold it,<br>and return it to you the next day (for orders in by 3pm).</p>
+      <p>We’ll pick up your laundry, wash it, dry it, fold it,<br>and return it to you the next day.</p>
           
     </div>
     
@@ -120,6 +120,7 @@
       <p>You hate laundry, but we love it. We’re obsessed with laundry, care to every detail, and deliver nothing
 but perfection—clean, fresh, and folded to a T. In fact, we ask afterwards “Was it perfect?” Customer
 ratings mean that only the best washers stay in the network.</p>
+      <a class="MiniCTAButton" onclick="ClickMiniCTA()">Do My Laundry <i class="material-icons">&#xE315;</i></a>
     </div>
       
   </section>
@@ -129,7 +130,8 @@ ratings mean that only the best washers stay in the network.</p>
     <div id="CustomizedInnerDiv">
     <img src="img/LaundryRoomCircle.png">
     <h1>Customized for You</h1>
-    <p>Machine dry, hang dry, hypoallergenic…it’s up to you. It’s your laundry done your way.</p>
+    <p>Machine dry, hang dry, hypoallergenic…it’s up to you. It’s your laundry done your way.<br><br><a style="color: white;" class="MiniCTAButton" onclick="ClickMiniCTA()">Do My Laundry <i class="material-icons">&#xE315;</i></a></p>
+    
     </div>
   
   </section>
@@ -143,7 +145,7 @@ ratings mean that only the best washers stay in the network.</p>
 
       <div id="ReviewTextDiv">
         <i class="material-icons">&#xE244;</i>
-        <p>SudShare is amazing! Everything was taken care of promptly and professionally. It was such a relief that I didn't have to worry about when I would have to get my laundry done. I really liked how I was kept updated throughout the process. I highly recommend SudShare. I am so grateful for their excellent service.</p>
+        <p>SudShare is amazing! Everything was taken care of promptly and professionally. It was such a relief that I didn't have to worry about when I would have to to do my laundry. I really liked how I was kept updated throughout the process. I highly recommend SudShare.</p>
         <label>Debbie Glazer</label>
       </div>
 
@@ -159,7 +161,6 @@ ratings mean that only the best washers stay in the network.</p>
     
       <h1>Be Free</h1>
       <h2>No worries, no work. You give us your laundry, we give you more time.</h2>
-    
     </div>
   
   </section>
@@ -174,7 +175,7 @@ ratings mean that only the best washers stay in the network.</p>
 
       <div class="FAQItemDiv" onclick="$(this).toggleClass('FAQItemOpen')">
                     <h1>What time do I have to place my order in order to get next day delivery?</h1>
-                    <p>Orders in by 2pm are delivered next day. After 2pm the following day.</p>
+                    <p>Orders in by 3pm are delivered next day. After 3pm the following day.</p>
                 </div>
 
 <div class="FAQItemDiv" onclick="$(this).toggleClass('FAQItemOpen')">
@@ -334,33 +335,33 @@ ratings mean that only the best washers stay in the network.</p>
 
         <img id="Logo" src="img/SudShareLogoWhite.png">
 
-        <h1 id="CTATitle">Got Laundry?<small>Just Tap the App. Done. Wash, Dry & Fold.</small></h1>
+       <h1 id="CTATitle">Got Laundry?<small>Just Tap the App & it's Done.</small></h1>
+        
         
                 <b id="CTABreak"></b>
 
+        <div class="CTAFeature">Wash, Dry<br>and Fold</div>
         <div class="CTAFeature" style=";letter-spacing: -0.5px;">Free Pickup & <br>Next Day Delivery</div>
-        <div class="CTAFeature">Money Back<br>Guarantee</div>
         <div class="CTAFeature">Simple Price:<br>Only $1/LB</div>
                 <b id="CTABreak"></b>
 
-        <div id="HomeCTADiv">
+        <div class="CTADiv" id="LastCTADiv">
                 
-        <button id="HomeCTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#HomeCTADiv').css('height','160px');$(this).css('display','none');$('#HomeCTAExpandDiv').css('transform','none')},150)">GET IT DONE</button>
+        <button class="CTAFirstButton" onclick="$(this).css('transform','perspective(500px) rotateX(90deg)');  setTimeout(function(){$('#LastCTADiv').css('height','160px');$(this).css('display','none');$('#LastCTAExpandDiv').css('transform','none')},150)">GET IT DONE</button>
         
-        
-        <div id="HomeCTAExpandDiv">
+        <div class="CTAExpandDiv" id="LastCTAExpandDiv">
 
-          <h1 id="HomeCTAExpandDivTitle">Download the App to Begin</h1>
-          <h2 id="HomeCTAExpandDivSubtitle">Enter Your Cell Phone and We’ll Text You a Link</h2>
+          <h1 class="CTAExpandDivTitle">Download the App to Begin</h1>
+          <h2 class="CTAExpandDivSubtitle">Enter Your Cell Phone and We’ll Text You a Link</h2>
         
-          <div id="HomeCTATextDiv">
+          <div class="CTATextDiv">
 
-          <span id="HomeCTALoadingParent">
-            <div id="HomeCTALoadingDiv"></div>
-            <label id="HomeCTALoadingText">Sending...</label>
+          <span class="CTALoadingParent">
+            <div class="CTALoadingDiv"></div>
+            <label class="CTALoadingText">Sending...</label>
             </span>
 
-          <span id="HomeCTAInputParent">
+          <span class="CTAInputParent">
               <input id="PhoneNumberInput1" maxlength="12" oninput="addDashesPhone(this)" type="tel" placeholder="000-000-0000">
               <button onclick="TextDownloadLink($('#PhoneNumberInput1').val())">Text Me<i class="material-icons">&#xE315;</i></button>
           </span>
@@ -383,6 +384,22 @@ ratings mean that only the best washers stay in the network.</p>
   </section>
 
 </body>
+  
+  <script>
+  
+    function ClickMiniCTA() {
+      
+      $("html, body").animate({ scrollTop: 0 }, 500);
+      
+      setTimeout(function(){
+        
+        $("#HomeCTAFirstButton").click();
+        
+      },550)
+      
+    }
+    
+  </script>
 
 <div id="LocationPopup" class="valign">
     

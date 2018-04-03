@@ -24,6 +24,28 @@ align-items: center;
   
 }
 
+.MiniCTAButton {
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #fd25d7;
+  border-radius: 20px;
+  padding: 7px 15px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: block;
+  width: 185px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.MiniCTAButton i {
+  position: relative;
+  top: 6px;
+  transition: all 0.2s;
+  left: 0;
+}
+.MiniCTAButton:hover i {
+  left: 5px;
+}
 
 #CTASec {
   height: 100%;
@@ -66,7 +88,7 @@ align-items: center;
 #CTATitle small {
   display: block;
   font-weight: 400;
-  font-size: 27px;
+  font-size: 39px;
   padding-left: 15px;
   margin-top: -12px;
   letter-spacing: 0px;
@@ -83,22 +105,33 @@ align-items: center;
   float: left;
   height: 30px;
   background:rgba(255, 255, 255, 0.12);
-  border-radius: 5px;
-  margin: 0 10px;
-  width: 110px;
-  margin-bottom: 20px;
+  border-radius: 10px;
+  margin: 0 5px;
+  width: 120px;
+  margin-bottom: 10px;
   text-align: center;
   padding: 10px;
-  font-size: 13px;
+  font-size: 14px;
   color: white;
   letter-spacing: 1px;
-  line-height: 125%;
+  line-height: 130%;
   box-shadow: 0 1px 2px rgba(0,0,0,0.12);
-  margin-top: 20px;
+  margin-top: 10px;
   text-shadow: 0 1px 1px rgba(0,0,0,0.35);
   overflow: hidden;
+  padding-top: 7px;
+  padding-bottom: 13px;
 }
-
+#CTASubtitle {
+  text-align: center;
+  width: 450px;
+  font-weight: 100;
+  font-size: 35px;
+  color: white;
+  letter-spacing: 15px;
+  margin: 0;
+  margin-bottom: 20px;
+}
 
 #CTABreak {
   height: 1px;
@@ -107,6 +140,7 @@ align-items: center;
 
   background: linear-gradient(to right,#25d7fd,rgba(255, 255, 255, 0.5), #25d7fd);
   clear: both;
+  opacity: 0;
 }
 
 
@@ -183,7 +217,7 @@ align-items: center;
 
 }
 
-#HomeCTADiv {
+.CTADiv {
   width: 450px;
   text-align: center;
   margin-top: 30px;
@@ -197,12 +231,12 @@ align-items: center;
   
   
 }
-#HomeCTADiv:hover #HomeCTAFirstButton{
+.CTADiv:hover .CTAFirstButton{
     
   letter-spacing:5px;
   
 }
-#HomeCTAFirstButton {
+.CTAFirstButton {
   position: absolute;
   z-index: 5;
   left: 0;
@@ -226,7 +260,14 @@ align-items: center;
   text-shadow: 0 1px 2px rgba(0,0,0,0.15);
 
 }
-#HomeCTAExpandDiv {
+.CTAFirstButton b {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 5px;
+  letter-spacing: 2px;
+}
+.CTAExpandDiv {
   transition: all 0.4s;
   transition-timing-function: ease-in;
   transform: perspective(500px) rotateX(-90deg);
@@ -235,14 +276,14 @@ align-items: center;
   background: #fd25d7;
   overflow: hidden;
 }
-#HomeCTAExpandDivTitle {
+.CTAExpandDivTitle {
   font-size: 25px;
   color: white;
   font-weight: 300;
   margin-bottom: 10px;
   margin-top: 15px;
 }
-#HomeCTAExpandDivSubtitle {
+.CTAExpandDivSubtitle {
   font-size: 13px;
   text-align: center;
   width: 350px;
@@ -253,7 +294,7 @@ align-items: center;
   font-weight: 400;
   
 }
-#HomeFeaturesDiv {
+.FeaturesDiv {
   height: 17px;
   padding: 5px 20px;
   background: white;
@@ -267,7 +308,7 @@ align-items: center;
   border-radius: 3px;
   cursor: default;
 }
-#HomeCTATextDiv {
+.CTATextDiv {
   margin: 0 auto;
   box-shadow: 0 1px 3px rgba(0,0,0,0.15);
   width: 375px;
@@ -278,7 +319,7 @@ align-items: center;
   background: white;
   position: relative;
 }
-#HomeCTATextDiv input {
+.CTATextDiv input {
   border: none;
   height: 100%;
   width: calc(100% - 160px);
@@ -293,7 +334,7 @@ align-items: center;
   left: 0;
   
 }
-#HomeCTATextDiv button {
+.CTATextDiv button {
   height: 100%;
   border: none;
   background: white;
@@ -311,30 +352,30 @@ align-items: center;
   right: 0;
 
 }
-#HomeCTATextDiv button i {
+.CTATextDiv button i {
   position: absolute;
   top: 13px;
   
 }
-#HomeCTATextDiv button:hover {
+.CTATextDiv button:hover {
   letter-spacing: 2px;
   text-shadow: 0 5px 25px rgba(0,0,0,0.2);
 }
-#HomeCTAInfoLabel {
+.CTAInfoLabel {
   color: gray;
   font-size: 14px;
   margin-bottom: 15px;
   display: block;
   width: 300px;
 }
-#HomeCTADiv a {
+.CTADiv a {
 
   margin-right: 15px;
 }
-#HomeCTADiv img {
+.CTADiv img {
   height: 45px;
 }
-#HomeCTALoadingDiv {
+.CTALoadingDiv {
   background: none;
   border: solid 4px #fd25d7;
   border-left-color: white;
@@ -351,7 +392,7 @@ align-items: center;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-#HomeCTALoadingParent {
+.CTALoadingParent {
   display: none;
 }
 @keyframes LoadingDivAnimate {
@@ -362,7 +403,7 @@ align-items: center;
     transform: rotate(360deg);
   }
 }
-#HomeCTALoadingText {
+.CTALoadingText {
   font-size: 20px;
   line-height: 50px;
   font-size: 25px;
@@ -426,14 +467,14 @@ align-items: center;
   float: right;
   margin-top: 120px;
   padding-bottom: 15px;
-  border-radius: 50px;
+  border-radius: 0px;
   padding-top: 10px;
   border-bottom: solid 2px white;
 }
 #CustomizedSec p {
   margin: 0 auto;
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
   padding-top: 25px;
   color: white;
   width: 750px;

@@ -16,31 +16,42 @@
 
 <body>
 
-  <section id="AboutSec" class="valign">
+  <section id="HomeSec" class="valign">
     
     <a href="index.html"><img id="Logo" src="img/SudShareLogo-Black-transparent.png"></a>
-  
-    <div id="AboutInnerDiv">
-    <label class="SectionTitle">ABOUT</label>
-    <h1 id="AboutTitle">Reimagine Laundry</h1>
-    
-    <p id="AboutText">Some people want more time. Others want more money. When it comes to laundry, we can help each other. Welcome to Sudshare. As part of the sharing economy, Sudshare is a platform that connects people who don’t want to do
-laundry with people who want to earn extra money. Sudshare helps people turn their washer/dryer into an income producing asset that saves others from a time consuming chore.For some, Sudshare is a home-based business with a flexible work schedule. For others, it’s a time-
-saving service that makes laundry as simple as "click and done."</p>
-    
-    <div id="ChooseDiv">
+      
+    <div id="HomeInnerDiv">
+      
+      <div id="HomeMenu"><label class="Selected" onclick="ChangeSection(this, 'AboutSec')">ABOUT</label><label onclick="ChangeSection(this, 'MissionSec')">OUR MISSION</label><label onclick="ChangeSection(this, 'BeginSec')">OUR BEGINNINGS</label><label onclick="ChangeSection(this, 'BoardSec')">Advisory board</label></div>
+      
+      <div id="HomeCodeDiv"></div>
+      
+      <div id="ChooseDiv">
         <a><button id="CustomerButton" style="background: linear-gradient(90deg,#0cd2fd, #0cfdb0)">Do My Laundry</button></a>
         <label>OR</label>
         <a href="sudster.html"><button id="SudsterButton" style="background: linear-gradient(to right,#ffc107, #ed02c4);float: right;">Join The Team</button></a>
-    </div>
       </div>
+  
+    </div>
+  
     
   </section>
   
-  <section id="MissionSec" class="valign">
+  <section id="AboutSec">
+  
+    <div id="AboutInnerDiv">
+      
+    <h1 id="AboutTitle">Reimagine Laundry</h1>
+    
+    <p id="AboutText">Some people want more time. Others want more money. When it comes to laundry, we can help each other. Welcome to Sudshare, a platform that connects people who don’t want to do laundry with people who want to earn extra money. For some, Sudshare is a home-based business with a flexible work schedule. For others, it’s a time-saving service that makes laundry as simple as "click and done."</p>
+  
+      </div>
+      
+  </section>
+  
+  <section id="MissionSec">
   
     <div id="MissionInnerDiv">
-    <label class="SectionTitle">Our Mission</label>
     <p>Laundry has long been a dreaded chore. Our mission is to eliminate that chore and give you a choice:<br>Make laundry your business or give the business to someone else and be done with laundry forever.</p>
     </div>
       
@@ -51,13 +62,11 @@ saving service that makes laundry as simple as "click and done."</p>
     
     <div id="BeginInnerDiv" class="valign">
       
-      <img src="img/NF.jpg">
+      <img src="img/NFCrop.jpg">
       <h6 id="BeginName">Nachshon Fertel<br>President, SudShare Inc.</h6>
     
       <div id="BeginTextDiv">    
-        
-        <label class="SectionTitle">OUR BEGINNINGS</label>
-
+    
       <p><b>Nachshon Fertel</b> is a triplet and one of 5 siblings. When he was 16 years old three things were soaring:<br><br>
         1. Uber’s popularity<br>
         2. The piles of laundry in his home<br>
@@ -71,12 +80,11 @@ saving service that makes laundry as simple as "click and done."</p>
   
   </section>
   
-  <section id="BoardSec" class="valign">
+  <section id="BoardSec">
   
     <div id="BoardInnerDiv">
-    <label class="SectionTitle">BOARD OF ADVISORS</label>
-    <br>
-    <a target="_blank" href="http://readingbuddysoftware.com"><div class="BoardItem">
+
+      <a target="_blank" href="http://readingbuddysoftware.com"><div class="BoardItem">
     
       <img src="img/AF.png">
       
@@ -106,6 +114,22 @@ saving service that makes laundry as simple as "click and done."</p>
     
   
   </section>
+  
+  <script>
+  
+    $(function(){
+      
+      $("#HomeCodeDiv").html($("#AboutSec").html());
+      
+    });
+    
+    function ChangeSection(Element, Section) {
+      $("#HomeMenu label").removeClass("Selected");
+      $(Element).addClass("Selected");
+      $("#HomeCodeDiv").html($("#" + Section).html());
+    }
+  
+  </script>
   
   <footer>
   

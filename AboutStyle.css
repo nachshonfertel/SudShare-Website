@@ -22,6 +22,49 @@ align-items: center;
   
 }
 
+
+#HomeSec {
+  height: 100vh;
+  min-height: 800px;
+  max-height: 1200px;
+}
+#HomeMenu {
+  width: 700px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  margin-bottom: 70px;
+}
+#HomeMenu label {
+  text-align: center;
+  display:inline-block;
+  margin: 0 19px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: lightgray;
+  border-bottom: solid 4px lightgray;
+  padding: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+#HomeMenu label:hover {
+  border-bottom-color: gray;
+  color: gray;
+}
+#HomeMenu .Selected {
+  border-bottom-color: black !important;
+  color: black !important;
+}
+#HomeInnerDiv {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+
 #ChooseDiv {
   margin: 0 auto;
   text-align: center;
@@ -32,6 +75,7 @@ align-items: center;
   width: 550px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   transition: all 0.2s;
+  margin-top:70px;
 }
 #ChooseDiv button {
   background: black;
@@ -68,22 +112,10 @@ align-items: center;
 }
 
 #AboutSec {
-  height: 850px;
-  background: white;
-  overflow: hidden;
-  text-align: center;
-}
-.SectionTitle {
-  text-align: center;
-  display:inline-block;
-  margin: 0 auto;
-  font-size: 15px;
-  letter-spacing: 3px;
-  color: black;
-  border-bottom: solid 4px black;
-  padding: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
+  
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 #Logo {
   position: absolute;
@@ -92,70 +124,79 @@ align-items: center;
   width: 200px;
 }
 #AboutInnerDiv {
-  max-width: 1000px;
+  max-width:900px;
   margin: 0 auto;
-  padding-bottom: 10px;
 }
 #AboutTitle {
-  font-size: 105px;
-  font-weight: 700;
+  font-size: 100px;
+  font-weight: 100;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 #AboutText {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   text-align: justify;
-  line-height: 170%;
+  line-height: 200%;
   font-size: 15px;
   color: dimgray;
-  margin-bottom: 70px;
-}
-
-#MissionSec {
-  background: white;
-  height: 400px;
-}
-#MissionInnerDiv {
-  box-shadow: 0 20px 70px rgba(0,0,0,0.15);
-  margin: 0 auto;
-  width: 90%;
-  max-width: 900px;
-  text-align: center;
-  padding: 35px 15px;
-  border-radius: 3px;
-}
-#MissionInnerDiv p {
-  margin-top: 30px;
-  line-height: 170%;
   
 }
 
-#BeginSec {
-  background: white;
-  overflow: hidden;
+#MissionSec {
+ 
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  
+}
+#MissionInnerDiv {
+  margin: 0 auto;
   text-align: center;
-  padding-top: 100px;
+  border-radius: 8px;
+  width: 1000px;
+  padding: 30px 0;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+  border-left: solid 8px black;
+}
+
+#MissionInnerDiv p {
+  line-height: 200%;
+  font-size: 19px;
+  margin: 0 auto;
+  letter-spacing: -0.5px;
+}
+
+#BeginSec {
+  
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 #BeginInnerDiv {
-  max-width: 1300px;
+  max-width: 1000px;
+  padding-left: 30px;
+  padding-right: 50px;
   margin: 0 auto;
-  height: 800px;
   position: relative;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.13);
+   border-left: solid 8px black;
+  overflow: hidden;
 }
 #BeginName {
   position: absolute;
   left: 90px;
-  bottom: 5px;
+  bottom: -12px;
   color: rgba(255, 255, 255, 0.5);
   text-align: left;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
   line-height: 140%;
 }
-#BeginSec img {
+#BeginInnerDiv img {
   float: left;
-  height: 100%;
+  height: 380px;
   object-fit: contain;
   object-position: center;
   padding-top: 0px;
@@ -167,43 +208,42 @@ align-items: center;
 #BeginTextDiv p {
   text-align: justify;
   line-height: 150%;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 #BoardSec {
-  background: white;
-  height: 900px;
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  text-align: center;
+
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .BoardItem {
   display: inline-block;
-  height: 380px;
+  height: 300px;
   overflow: hidden;
-  width: 300px;
+  width: 250px;
   box-shadow: 0 15px 50px rgba(0,0,0,0.12);
-  border-radius: 3px;
-  margin: 100px 20px;
+  border-radius: 5px;
+  margin: 0px 20px;
   margin-bottom: 0px;
   color: black;
   text-decoration: none;
+  border-bottom: solid 5px black;
   
 }
 .BoardItem img {
-  width: 250px;
-  height: 250px;
+  width: 180px;
+  height: 180px;
   margin-top: 25px;
 }
 .BoardItem h1 {
-  font-size: 27px;
+  font-size: 25px;
   font-weight: 400;
-  margin-top: 18px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 13px;
 }
 .BoardItem h2 {
-  font-size: 15px;
+  font-size: 12px;
   margin-top: 0px;
   font-weight: 400;
   color: dimgray;
@@ -211,8 +251,6 @@ align-items: center;
 #BoardInnerDiv {
   margin: 0 auto;
 }
-
-
 
 
 #LocationPopup {
